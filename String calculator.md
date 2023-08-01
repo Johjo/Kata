@@ -150,7 +150,7 @@ Il peut désormais y avoir plusieurs délimiteurs personnalisés grâce à la sy
 
 Par exemple : 
 ```java
-calculate("//{%}{**}\n5%2*3") // doit renvoyer 13
+calculate("//{%}{*}\n5%2*3") // doit renvoyer 10
 ```
 
 ### Etape 10 - Plusieurs délimiteurs de taille variable
@@ -161,3 +161,9 @@ Les délimiteurs personnalisés peuvent désormais être de n'importe quelle tai
 * `[delimiter 1]` est le premier délimiteur de n'importe quelle taille supérieure ou égale à 1
 * `[delimiter 2]` est le second délimiteur de n'importe quelle taille supérieure ou égale à 1
 * `[numbers]` correspond à la liste des nombres à aditionner
+
+Par exemple :
+
+```java
+calculate("//{%}{.*}\n5%2.*3") // doit renvoyer 10
+```
